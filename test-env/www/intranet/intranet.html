@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tableau de bord — Intranet TEK-IT-IZY</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0a;--surface:#111;--border:#2a2a2a;--red:#e74c3c;--text:#e0e0e0;--muted:#707070;--green:#2ecc71}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:58px}
+    .logo{font-weight:700;font-size:1rem;display:flex;align-items:center;gap:.5rem}
+    .dot-r{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 5px var(--red)}
+    nav a{color:var(--muted);text-decoration:none;font-size:.85rem;transition:color .2s}
+    nav a:hover{color:var(--text)}
+    .page-title{padding:2rem;border-bottom:1px solid var(--border)}
+    .page-title h1{font-size:1.5rem;font-weight:700;margin-bottom:.2rem}
+    .page-title p{color:var(--muted);font-size:.85rem}
+    main{max-width:980px;margin:0 auto;padding:2rem 1.5rem;width:100%;flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    @media(max-width:640px){main{grid-template-columns:1fr}}
+    .widget{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.4rem}
+    .widget-header{display:flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:1.1rem;padding-bottom:.8rem;border-bottom:1px solid var(--border)}
+    .stat-row{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.8rem}
+    .stat-val{font-size:1.8rem;font-weight:800;color:var(--red)}
+    .stat-sub{font-size:.8rem;color:var(--muted)}
+    .status-row{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid var(--border);font-size:.82rem}
+    .status-row:last-child{border-bottom:none}
+    .status-on{color:var(--green);font-weight:600;font-size:.75rem}
+    .list-item{display:flex;align-items:center;gap:.7rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.85rem}
+    .list-item:last-child{border-bottom:none}
+    .list-item span{color:var(--muted);font-size:.78rem;margin-left:auto}
+    footer{padding:1.5rem;border-top:1px solid var(--border);text-align:center;font-size:.78rem;color:var(--muted);margin-top:auto}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="dot-r"></span> TEK-IT-IZY — Intranet</div>
+    <a href="/index.html">← Accueil</a>
+  </nav>
+  <div class="page-title"><h1>Tableau de bord</h1><p>Vue d'ensemble des ressources et services internes.</p></div>
+  <main>
+    <div class="widget">
+      <div class="widget-header">📊 Ressources</div>
+      <div class="stat-row"><span class="stat-val">3</span><span class="stat-sub">Sites actifs</span></div>
+      <div class="stat-row"><span class="stat-val">2025</span><span class="stat-sub">Port intranet</span></div>
+      <div class="stat-row"><span class="stat-val">PHP 8.1</span><span class="stat-sub">Moteur dynamique</span></div>
+    </div>
+    <div class="widget">
+      <div class="widget-header">🔧 Services</div>
+      <div class="status-row"><span>nginx</span><span class="status-on">● Actif</span></div>
+      <div class="status-row"><span>PHP-FPM</span><span class="status-on">● Actif</span></div>
+      <div class="status-row"><span>Auth HTTP</span><span class="status-on">● Activée</span></div>
+      <div class="status-row"><span>Logs accès</span><span class="status-on">● Activés</span></div>
+    </div>
+    <div class="widget" style="grid-column:span 2">
+      <div class="widget-header">🔗 Liens rapides</div>
+      <div class="list-item">🌐 Site public TEK-IT-IZY<span>www.tek-it-izy.org</span></div>
+      <div class="list-item">🖥️ Serveur Raspberry Pi<span>raspb215.univ-lr.fr</span></div>
+      <div class="list-item">👤 Pages personnelles<span>/~login/pages_personnelles/</span></div>
+    </div>
+  </main>
+  <footer>TEK-IT-IZY Intranet · Usage interne uniquement · © 2025</footer>
+</body>
+</html>

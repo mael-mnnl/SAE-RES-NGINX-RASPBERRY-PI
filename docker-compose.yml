@@ -1,0 +1,20 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"    # sites raspb215 et www.tek-it-izy.org → http://...:8080/
+      - "2025:2025"  # intranet → http://intranet.tek-it-izy.org:2025/
+    volumes:
+      - ./test-env/www:/www
+      - ./test-env/var-www-html:/var/www/html
+      - ./test-env/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./test-env/nginx/auth:/etc/nginx/auth:ro
+      - ./test-env/nginx/fastcgi-php.conf:/etc/nginx/fastcgi-php.conf:ro
+    depends_on:
+      - php-fpm
+
+  php-fpm:
+    image: php:8.1-fpm-alpine
+    volumes:
+      - ./test-env/www:/www
+      - ./test-env/var-www-html:/var/www/html

@@ -1,0 +1,2 @@
+172.18.0.1 - - [01/Apr/2026:14:49:19 +0000] "GET / HTTP/1.1" 200 263 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+172.18.0.1 - - [01/Apr/2026:14:49:19 +0000] "GET /favicon.svg HTTP/1.1" 200 247 "http://www.tek-it-izy.org:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
